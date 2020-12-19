@@ -20,3 +20,6 @@ if path not in sys.path:
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
 
 application = get_wsgi_application()
+import django
+django.setup()
+from mysite.myapi.models import Hero
