@@ -13,7 +13,7 @@ from pathlib import Path,os
 from django.core.wsgi import get_wsgi_application
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
-path = r'D:/data from other partiton/python/django_test/'
+path = r'D:/data from other partiton/python/django_test/mysite'
 if path not in sys.path:
     sys.path.append(path)
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
