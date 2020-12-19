@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+<head>
+<title>UPDATE</title>
+</head>
+
+<body>
+<h1>UPDATE</h1>
+{% if queryset%}
+<form action="{% url 'update'  queryset.id %}" method="POST">
+{% csrf_token %}
+
+Name: <input type="text" name="name" value="{{queryset.name}}"/><br/>
+ <br/>
+ALias: <input type="text" name="alias" value="{{ queryset.alias }}">
+<br/><br/>
+<button type="submit" class="btn btn-success">Update</button>  
+
+</form>
+{% endif %}
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+<head>
+<title>ADD NEW</title>
+</head>
+
+<body>
+<h1>ADD NEW </h1>
+<form action="" method="POST">
+{% csrf_token %}
+Name: <input type="text" name="name"/><br/><br/>
+Alais: <input type="text" name="alias"><br/><br/>
+<input type="submit" value="ADD NEW"/>
+</form>
+
+</body>
+
+</html>

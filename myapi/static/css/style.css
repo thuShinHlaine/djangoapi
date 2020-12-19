@@ -1,0 +1,16 @@
+.btn{
+	display:block;
+	color:#FFFFFF;
+	background-color:#c850c0;
+	text-align:center;
+	cursor:pointer; 
+	border:1px solid transparent; 
+	padding:6px 16px; 
+	font-size:14px; 
+    border-radius:4px;
+    box-shadow: 2px 2px  #ffffff;
+}
+
+.btn:hover{
+    background-color:#BA55D3;
+}

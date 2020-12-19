@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>API Test</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{%  static  'images/icons/favicon.ico'  %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static  'vendor/bootstrap/css/bootstrap.min.css'  %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static  'fonts/font-awesome-4.7.0/css/font-awesome.min.css'  %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static  'vendor/animate/animate.css'  %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static  'vendor/select2/select2.min.css'  %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static  'vendor/perfect-scrollbar/perfect-scrollbar.css'  %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static  'css/util.css'  %}">
+	<link rel="stylesheet" type="text/css" href="{%  static  'css/main.css'  %}">
+    <link rel="stylesheet" type="text/css" href="{%  static  'css/style.css'  %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+    
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+                <input type="submit" value="ADD NEW" class="btn" onclick="location.href='{% url 'addnew' %}'">
+                <br/><br/><br/>
+                {% if queryset %}
+    
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">ID</th>
+								<th class="column2">Name</th>
+								<th class="column3">Alias</th>
+                                <th class="column4"></th>
+                                <th class="column5"></th>
+								
+							</tr>
+						</thead>
+						<tbody>
+								{% for myapi_hero in queryset %}
+                                <tr>
+                                <td>{{ myapi_hero.id }}</td>
+                                <td>{{ myapi_hero.name }}</td>
+                                <td>{{ myapi_hero.alias }}</td>
+                                <td><a href="{% url 'delete'  myapi_hero.id %}" style="color:red;">Delete</a></td>
+                                <td><a href="{% url 'edit'  myapi_hero.id %}" style="color:green;">Update</a></td>
+                                    </tr>	
+                                {% endfor %}							
+						</tbody>
+					</table>
+                   
+				</div>
+                
+			</div>
+            
+		</div>
+        
+                {% else %}
+                <p>No polls are available.</p>
+                {% endif %}
+	</div>
+ 
+
+	
+
+<!--===============================================================================================-->	
+	<script src="{%  static  'vendor/jquery/jquery-3.2.1.min.js'  %}"></script>
+<!--===============================================================================================-->
+	<script src="{%  static  'vendor/bootstrap/js/popper.js'  %}"></script>
+	<script src="{%  static  'vendor/bootstrap/js/bootstrap.min.js'  %}"></script>
+<!--===============================================================================================-->
+	<script src="{%  static  'vendor/select2/select2.min.js'  %}"></script>
+<!--===============================================================================================-->
+	<script src="{%  static  'js/main.js'  %}"></script>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="{% static '/__/firebase/7.21.1/firebase-app.js' %}"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="{% static '/__/firebase/7.21.1/firebase-analytics.js' %}"></script>
+
+<!-- Initialize Firebase -->
+<script src="{% static '/__/firebase/init.js'%}"></script>
+
+</body>
+</html>
