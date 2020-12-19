@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '96c18f20ceb5d8f4b89eb5f6ad557dd1ef512ca0daa02258'
-DEBUG_VALUE= 'True'
+DEBUG=True
 # SECURITY WARNING: don't run with debug turned on in production!
 SECRET_KEY=os.environ.get(SECRET_KEY)
-DEBUG=os.environ.get(DEBUG_VALUE)
+
 
 ALLOWED_HOSTS = [
                  'myheroapi.herokuapp.com',
