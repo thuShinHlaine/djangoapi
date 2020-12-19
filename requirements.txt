@@ -23,5 +23,5 @@ toml==0.10.1
 urllib3==1.22
 wrapt==1.12.1
 
-gunicorn==0.14.2
+
 
