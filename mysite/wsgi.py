@@ -11,7 +11,7 @@ import os
 import sys
 from django.core.wsgi import get_wsgi_application
 
-path = 'D:\data from other partiton\python\django_test\mysite'
+path = r'D:\data from other partiton\python\django_test\mysite'
 sys.path.append(path)
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
 
