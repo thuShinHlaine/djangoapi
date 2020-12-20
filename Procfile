@@ -1,2 +1,1 @@
-web: python manage.py runserver
-web: gunicorn --pythonpath path_wsgi_application --log-file -
+web: gunicorn --env DJANGO_SETTINGS_MODULE=myproject.settings mysite.wsgi
