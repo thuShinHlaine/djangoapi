@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'ss&+owk*my7xj!r)xtzeqe(x46_s9n8n(*utnsvk0+$$!()#34'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-                 'myheroapi.herokuapp.com',
+                 'myheroapi.herokuapp.com/myapi',
                  '127.0.0.0',
                  ]
 
