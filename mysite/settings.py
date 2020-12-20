@@ -27,6 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
                  'myheroapi.herokuapp.com',
+                 '127.0.0.0',
                  ]
 
 
