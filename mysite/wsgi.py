@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 
 import os
 import sys
-path='/python/django_test/mysite'
+path='D:/data from other partiton/python/django_test/mysite'
 if path not in sys.path:
     sys.path.append(path)
 
