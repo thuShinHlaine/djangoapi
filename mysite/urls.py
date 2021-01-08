@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls import  url
+from mysite import settings
 
 
 urlpatterns = [
-    
+    (r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     path('admin/', admin.site.urls),
     path('myapi/', include('myapi.urls')),
 ]
