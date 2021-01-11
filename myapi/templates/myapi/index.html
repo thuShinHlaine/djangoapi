@@ -53,7 +53,8 @@
                                 <td>{{ myapi_hero.alias }}</td>
                                 <td><input type="submit" value="Update" class="btn btn-success" onclick="location.href='{% url 'edit'  myapi_hero.id %}'">
 								</td>
-                                <td><a href="{% url 'delete'  myapi_hero.id %}" style="color:green;" class="btn btn-success">Update</a></td>
+                                <td><input type="submit" value="Delete" class="btn btn-danger" onclick="location.href='{% url 'delete'  myapi_hero.id %}'">
+								
                                     </tr>	
                                 {% endfor %}							
 						</tbody>
