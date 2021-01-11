@@ -51,8 +51,9 @@
                                 <td>{{ myapi_hero.id }}</td>
                                 <td>{{ myapi_hero.name }}</td>
                                 <td>{{ myapi_hero.alias }}</td>
-                                <td><a href="{% url 'delete'  myapi_hero.id %}" style="color:red;" class="btn btn-danger">Delete</a></td>
-                                <td><a href="{% url 'edit'  myapi_hero.id %}" style="color:green;" class="btn btn-success">Update</a></td>
+                                <td><input type="submit" value="Update" class="btn btn-success" onclick="location.href='{% url 'edit'  myapi_hero.id %}'">
+								</td>
+                                <td><a href="{% url 'delete'  myapi_hero.id %}" style="color:green;" class="btn btn-success">Update</a></td>
                                     </tr>	
                                 {% endfor %}							
 						</tbody>
