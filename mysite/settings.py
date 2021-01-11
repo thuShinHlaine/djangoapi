@@ -24,7 +24,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'ss&+owk*my7xj!r)xtzeqe(x46_s9n8n(*utnsvk0+$$!()#34'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
                  'myheroapi.herokuapp.com/myapi',
