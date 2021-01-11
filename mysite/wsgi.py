@@ -16,8 +16,5 @@ if path not in sys.path:
 
 from django.core.wsgi import get_wsgi_application
 from django.contrib.staticfiles.handlers import StaticFilesHandler
-from whitenoise import WhiteNoise
-
 
 application = StaticFilesHandler(get_wsgi_application())
-application = WhiteNoise(application, root='/static/')
